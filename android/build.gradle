@@ -17,9 +17,6 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
-        maven {
-            url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
-        }
         mavenCentral()
         maven { url 'https://jitpack.io' }
     }
@@ -55,11 +52,7 @@ android {
 }
 
 dependencies {
-//    implementation 'io.github.webrtc-sdk:android:125.6422.02'
     implementation 'io.github.webrtc-sdk:android-prefixed:125.6422.02'
-
-    //jetified-webrtc-118.0.0-runtime
-//    implementation ('org.jitsi.react:jitsi-meet-sdk:9.2.2') { transitive = true }
     implementation 'com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a'
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
